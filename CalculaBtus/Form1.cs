@@ -39,20 +39,24 @@ namespace CalculaBtus
                 {
                     AreaEmMetros = double.Parse(txtAreaEmMetrosQuadrados.Text);
                     result = AreaEmMetros * 800;
+                    //No final ele soma o resultado + qntPessoas * 800
+                    result += quantidadePessoa * 800;
+                    //Mostra o resultado na tela para o user
+                    lblResultado.Text = $"Área de {AreaEmMetros} metros quadrados," +
+                          $" com {quantidadePessoa} pessoas usando o ambiente, será necessário {result} BTUs.";
                 }
                 //Se não selecionar com sol da tarde, ele faz esse calculo
                 else
                 {
                     AreaEmMetros = double.Parse(txtAreaEmMetrosQuadrados.Text);
                     result = AreaEmMetros * 600;
+                    //No final ele soma o resultado + qntPessoas * 800
+                    result += quantidadePessoa * 600;
+                    //Mostra o resultado na tela para o user
+                    lblResultado.Text = $"Área de {AreaEmMetros} metros quadrados," +
+                          $" com {quantidadePessoa} pessoas usando o ambiente, será necessário {result} BTUs.";
                 }
 
-                //No final ele soma o resultado + qntPessoas * 800
-                result += quantidadePessoa * 800;
-
-                //Mostra o resultado na tela para o user
-                lblResultado.Text = $"Área de {AreaEmMetros} metros quadrados," +
-                      $" com {quantidadePessoa} pessoas usando o ambiente, será necessário {result} BTUs.";
             }
             //Trata o erro de formato inválido
             catch (FormatException)
@@ -70,6 +74,7 @@ namespace CalculaBtus
             lblResultado.Text = "";
             cboQuantidadeDePessoas.Text = "";
             chkSolDaTarde.Checked = false;
+            cboQuantidadeDePessoas.SelectedIndex = 0;
         }
 
         private void btn_Limpar_Click(object sender, EventArgs e)
