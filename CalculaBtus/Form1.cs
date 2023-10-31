@@ -88,5 +88,29 @@ namespace CalculaBtus
             //Já começa o programa com uma 0 pessoa selecionada
             cboQuantidadeDePessoas.SelectedIndex = 0;
         }
+
+        private void txt_Largura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_Comprimento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAreaEmMetrosQuadrados_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

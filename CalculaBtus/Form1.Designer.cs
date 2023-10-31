@@ -62,6 +62,7 @@
             txt_Largura.Name = "txt_Largura";
             txt_Largura.Size = new Size(100, 23);
             txt_Largura.TabIndex = 1;
+            txt_Largura.KeyPress += txt_Largura_KeyPress;
             // 
             // chkSolDaTarde
             // 
@@ -80,6 +81,7 @@
             txtAreaEmMetrosQuadrados.Name = "txtAreaEmMetrosQuadrados";
             txtAreaEmMetrosQuadrados.Size = new Size(100, 23);
             txtAreaEmMetrosQuadrados.TabIndex = 3;
+            txtAreaEmMetrosQuadrados.KeyPress += txtAreaEmMetrosQuadrados_KeyPress;
             // 
             // txt_Comprimento
             // 
@@ -87,6 +89,7 @@
             txt_Comprimento.Name = "txt_Comprimento";
             txt_Comprimento.Size = new Size(100, 23);
             txt_Comprimento.TabIndex = 4;
+            txt_Comprimento.KeyPress += txt_Comprimento_KeyPress;
             // 
             // label1
             // 
@@ -154,7 +157,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(27, 27);
+            label4.Location = new Point(31, 27);
             label4.Name = "label4";
             label4.Size = new Size(203, 21);
             label4.TabIndex = 11;
@@ -163,7 +166,7 @@
             // btn_Limpar
             // 
             btn_Limpar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_Limpar.Location = new Point(215, 341);
+            btn_Limpar.Location = new Point(219, 343);
             btn_Limpar.Name = "btn_Limpar";
             btn_Limpar.Size = new Size(75, 34);
             btn_Limpar.TabIndex = 12;
@@ -205,7 +208,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(559, 387);
+            ClientSize = new Size(558, 389);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -222,9 +225,10 @@
             Controls.Add(chkSolDaTarde);
             Controls.Add(txt_Largura);
             Controls.Add(cboQuantidadeDePessoas);
+            MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Calculadora de BTUS";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
